@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_writer"
+    app:startDestination="@id/writer_mode">
+
+    <fragment
+        android:id="@+id/writer_mode"
+        android:name="com.example.myapplication.WriterModeFragment"
+        android:label="WriterModeFragment" >
+        <action
+            android:id="@+id/action_WriterModeFragment_to_WriterSettingsFragment"
+            app:destination="@id/writer_settings" />
+        <action
+            android:id="@+id/action_WriterModeFragment_to_WritingStoryFragment"
+            app:destination="@id/writing_story" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/writer_settings"
+        android:name="com.example.myapplication.WriterSettingsFragment"
+        android:label="WriterSettingsFragment" >
+        <action
+            android:id="@+id/action_WriterSettingsFragment_to_WriterModeFragment"
+            app:destination="@id/writer_mode" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/writing_story"
+        android:name="com.example.myapplication.WritingStoryFragment"
+        android:label="WritingStoryFragment" >
+        <action
+            android:id="@+id/action_WritingStoryFragment_to_WriterModeFragment"
+            app:destination="@id/writer_mode" />
+    </fragment>
+
+</navigation>
