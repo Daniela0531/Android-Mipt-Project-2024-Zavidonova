@@ -20,12 +20,12 @@
     <string name="hello_third_fragment">Hello third fragment</string>
 
     <string name="writer_mode">Режим писателя</string>
-    <string name="about_app">Это о моём приложении</string>
+    <string name="about_app">Рассказ о моём приложении</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">почта</string>
-    <string name="prompt_password">пароль</string>
+    <string name="prompt_email">Почта</string>
+    <string name="prompt_password">Пароль</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
@@ -38,7 +38,7 @@
     <string name="stories">истории</string>
     <string name="background">фон</string>
     <string name="theme">тема</string>
-    <string name="writing">написать</string>
+    <string name="writing">писать</string>
     <string name="reader_mode">Режим читателя</string>
 
 </resources>

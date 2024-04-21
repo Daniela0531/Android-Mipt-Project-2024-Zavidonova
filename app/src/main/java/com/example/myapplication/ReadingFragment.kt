@@ -5,21 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Switch
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.databinding.FragmentReaderSettingsBinding
+import com.example.myapplication.databinding.FragmentReadingBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
-class ReaderSettingsFragment : Fragment() {
+class ReadingFragment : Fragment() {
 
-    private var _binding: FragmentReaderSettingsBinding? = null
-    private lateinit var switchTheme: Switch
-    private lateinit var textView: Switch
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private var _binding: FragmentReadingBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -27,7 +18,7 @@ class ReaderSettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentReaderSettingsBinding.inflate(inflater, container, false)
+        _binding = FragmentReadingBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -36,8 +27,9 @@ class ReaderSettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonStories.setOnClickListener {
-            findNavController().navigate(R.id.action_ReaderSettingsFragment_to_MainReaderFragment)
+            findNavController().navigate(R.id.action_ReadingFragment_to_MainReaderFragment)
         }
+
     }
 
     override fun onDestroyView() {

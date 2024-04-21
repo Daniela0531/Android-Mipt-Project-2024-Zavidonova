@@ -7,14 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentReadingBinding
-import com.example.myapplication.databinding.FragmentWriterSettingsBinding
+import com.example.myapplication.databinding.FragmentWritingBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
-class WriterSettingsFragment : Fragment() {
+class WritingFragment : Fragment() {
 
-    private var _binding: FragmentWriterSettingsBinding? = null
+    private var _binding: FragmentWritingBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,7 +19,7 @@ class WriterSettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentWriterSettingsBinding.inflate(inflater, container, false)
+        _binding = FragmentWritingBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -30,9 +27,10 @@ class WriterSettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonStories.setOnClickListener {
-            findNavController().navigate(R.id.action_WriterSettingsFragment_to_MainWriterFragment)
+        binding.buttonToStoriesFromWriting.setOnClickListener {
+            findNavController().navigate(R.id.action_WritingFragment_to_MainWriterFragment)
         }
+
     }
 
     override fun onDestroyView() {

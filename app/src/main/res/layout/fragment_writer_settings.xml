@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".WriterModeFragment">
+    tools:context=".WriterSettingsFragment">
+
     <LinearLayout
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="10sp"
@@ -14,8 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:context=".NavigationActivity">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,12 +24,12 @@
             android:layout_marginVertical="200sp"
             android:layout_marginHorizontal="50sp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/button_to_stories_from_settings"
+            app:layout_constraintBottom_toTopOf="@id/stories"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <Button android:id="@+id/button_writer_background"
+            <Button android:id="@+id/button_background"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,7 +39,7 @@
                 android:text="@string/background"
                 android:layout_marginVertical="20sp"/>
 
-            <Button android:id="@+id/button_writer_theme"
+            <Button android:id="@+id/button_theme"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
-            android:id="@+id/button_to_stories_from_settings"
+            android:id="@+id/button_stories"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

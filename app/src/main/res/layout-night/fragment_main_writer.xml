@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ReaderNavigationFragment">
+    tools:context=".MainWriterFragment">
 
 
     <LinearLayout
-        android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="10sp"
@@ -20,23 +19,31 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/story_text"
+            android:id="@+id/writer_story_text"
             android:layout_weight="10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/reading" />
+            android:text="@string/stories" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/button_stories"
+                android:id="@+id/writer_settings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/stories"
+                android:text="@string/settings"
+                android:layout_marginHorizontal="2sp"/>
+
+            <Button
+                android:id="@+id/to_write"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/writing"
                 android:layout_marginHorizontal="2sp"/>
         </LinearLayout>
 
