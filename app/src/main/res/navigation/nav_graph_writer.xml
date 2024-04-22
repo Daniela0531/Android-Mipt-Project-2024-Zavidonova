@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_writer"
+    app:startDestination="@id/MainWriterFragment">
+
+    <fragment
+        android:id="@+id/MainWriterFragment"
+        android:name="com.example.myapplication.MainWriterFragment"
+        android:label="MainWriterFragment"
+        tools:layout="@layout/fragment_main_writer">
+        <action
+            android:id="@+id/action_MainWriterFragment_to_WriterSettingsFragment"
+            app:destination="@id/WriterSettingsFragment" />
+        <action
+            android:id="@+id/action_MainWriterFragment_to_WritingFragment"
+            app:destination="@id/WritingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WriterSettingsFragment"
+        android:name="com.example.myapplication.WriterSettingsFragment"
+        android:label="WriterSettingsFragment"
+        tools:layout="@layout/fragment_reader_settings">
+        <action
+            android:id="@+id/action_WriterSettingsFragment_to_MainWriterFragment"
+            app:destination="@id/MainWriterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WritingFragment"
+        android:name="com.example.myapplication.WritingFragment"
+        android:label="WritingFragment"
+        tools:layout="@layout/fragment_writing">
+        <action
+            android:id="@+id/action_WritingFragment_to_MainWriterFragment"
+            app:destination="@id/MainWriterFragment" />
+    </fragment>
+
+</navigation>

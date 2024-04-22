@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_reader"
+    app:startDestination="@id/MainReaderFragment">
+
+    <fragment
+        android:id="@+id/ReaderSettingsFragment"
+        android:name="com.example.myapplication.ReaderSettingsFragment"
+        android:label="ReaderSettingsFragment"
+        tools:layout="@layout/fragment_reader_settings">
+
+        <action
+            android:id="@+id/action_ReaderSettingsFragment_to_MainReaderFragment"
+            app:destination="@id/MainReaderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MainReaderFragment"
+        android:name="com.example.myapplication.MainReaderFragment"
+        android:label="ReaderFragment"
+        tools:layout="@layout/fragment_main_reader">
+
+        <action
+            android:id="@+id/action_MainReaderFragment_to_ReadingFragment"
+            app:destination="@id/ReadingFragment" />
+        <action
+            android:id="@+id/action_MainReaderFragment_to_ReaderSettingsFragment"
+            app:destination="@id/ReaderSettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ReadingFragment"
+        android:name="com.example.myapplication.ReadingFragment"
+        android:label="ReadingFragment"
+        tools:layout="@layout/fragment_reading">
+
+        <action
+            android:id="@+id/action_ReadingFragment_to_MainReaderFragment"
+            app:destination="@id/MainReaderFragment" />
+    </fragment>
+
+</navigation>
