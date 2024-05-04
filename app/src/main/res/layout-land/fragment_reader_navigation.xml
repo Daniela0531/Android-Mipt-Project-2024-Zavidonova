@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/fullscreenBackgroundColor"
-    android:theme="@style/ThemeOverlay.Inspiration.FullscreenContainer"
-    tools:context=".WriterNavigationFragment">
+    tools:context=".reader_mode.ReaderNavigationFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MyApplication.AppBarOverlay">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/button_to_app_discription_from_writer"
+                android:id="@+id/button_to_app_discription_from_reader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -27,18 +27,19 @@
                 android:text="@string/aboutApp" />
 
             <Button
-                android:id="@+id/button_to_reader_mode_from_writer"
+                android:id="@+id/button_to_writer_mode_from_reader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
 
-                android:text="@string/reader_mode" />
+                android:text="@string/writer_mode" />
 
         </LinearLayout>
 
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_navigation_writer" />
+    <include layout="@layout/content_navigation_reader" />
 
-</FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

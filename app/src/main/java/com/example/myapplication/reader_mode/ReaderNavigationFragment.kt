@@ -1,19 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.reader_mode
 
-import android.R
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.R.layout.fragment_reader_navigation
 import com.example.myapplication.databinding.FragmentReaderNavigationBinding
-import com.example.myapplication.databinding.FragmentSplashScreenBinding
 
 //class ReaderNavigationFragment : Fragment() {
 //    private var mListener: MainReaderFragment.OnFragmentInteractionListener? = null
