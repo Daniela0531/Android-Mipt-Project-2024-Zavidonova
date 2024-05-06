@@ -1,4 +1,4 @@
-package com.example.myapplication.writer_mode
+package com.example.myapplication
 
 import android.os.Bundle
 import android.util.Log

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/fullscreenBackgroundColor"
     android:theme="@style/ThemeOverlay.Inspiration.FullscreenContainer"
-    tools:context=".writer_mode.WriterNavigationFragment">
+    tools:context=".WriterNavigationFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

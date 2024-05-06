@@ -1,4 +1,4 @@
-package com.example.myapplication.reader_mode
+package com.example.myapplication
 
 import android.os.Bundle
 import android.util.Log
@@ -93,13 +93,13 @@ class ReaderNavigationFragment : Fragment() {
 
         binding.buttonToWriterModeFromReader.setOnClickListener {
             Log.d("registration","let press button")
-            findNavController().navigate(com.example.myapplication.R.id.action_ReaderNavigationFragment_to_WriterNavigationFragment)
+            findNavController().navigate(R.id.action_ReaderNavigationFragment_to_WriterNavigationFragment)
             Log.d("registration","have pressed button")
         }
 
         binding.buttonToAppDiscriptionFromReader.setOnClickListener {
             Log.d("registration","let press button")
-            findNavController().navigate(com.example.myapplication.R.id.action_ReaderNavigationFragment_to_AboutAppFragment)
+            findNavController().navigate(R.id.action_ReaderNavigationFragment_to_AboutAppFragment)
             Log.d("registration","have pressed button")
         }
     }

@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/ReaderNavigationFragment"
-        android:name="com.example.myapplication.reader_mode.ReaderNavigationFragment"
+        android:name="com.example.myapplication.ReaderNavigationFragment"
         android:label="ReaderNavigationFragment"
         tools:layout="@layout/fragment_reader_navigation">
 
@@ -110,7 +110,7 @@
 
     <fragment
         android:id="@+id/WriterNavigationFragment"
-        android:name="com.example.myapplication.writer_mode.WriterNavigationFragment"
+        android:name="com.example.myapplication.WriterNavigationFragment"
         android:label="WriterNavigationFragment"
         tools:layout="@layout/fragment_writer_navigation">
 
