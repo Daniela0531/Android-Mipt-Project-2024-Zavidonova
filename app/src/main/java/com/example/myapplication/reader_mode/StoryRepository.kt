@@ -18,14 +18,11 @@ class StoryRepository(
     val storyListObservable: Observable<List<Story>> = currentStoryList
 
     fun loadStory(): Disposable {
-        Log.d("loadStory", "storyService.getStory")
         return storyService.getStory()
             .subscribeOn(Schedulers.io())
             .subscribe { story ->
-                Log.d("storyService.getStory", "before all")
                 val newList = currentStoryList.value!!.toMutableList() + story
                 currentStoryList.onNext(newList)
-                Log.d("storyService.getStory", "after all")
             }
     }
 }

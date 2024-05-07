@@ -46,14 +46,14 @@ class MainReaderFragment : Fragment(R.layout.fragment_main_reader) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("main reader fragment","onViewCreated")
 
-        binding.reading.setOnClickListener {
-            findNavController().navigate(R.id.action_MainReaderFragment_to_ReadingFragment)
-        }
-        Log.d("main reader fragment","binding.settings")
-
-        binding.settings.setOnClickListener {
-            findNavController().navigate(R.id.action_MainReaderFragment_to_ReaderSettingsFragment)
-        }
+//        binding.reading.setOnClickListener {
+//            findNavController().navigate(R.id.action_MainReaderFragment_to_ReadingFragment)
+//        }
+//        Log.d("main reader fragment","binding.settings")
+//
+//        binding.settings.setOnClickListener {
+//            findNavController().navigate(R.id.action_MainReaderFragment_to_ReaderSettingsFragment)
+//        }
 
         /////////
 
