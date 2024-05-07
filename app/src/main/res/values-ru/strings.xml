@@ -40,5 +40,6 @@
     <string name="theme">тема</string>
     <string name="writing">писать</string>
     <string name="reader_mode">Режим читателя</string>
+    <string name="load_picture">загрузить фон</string>
 
 </resources>

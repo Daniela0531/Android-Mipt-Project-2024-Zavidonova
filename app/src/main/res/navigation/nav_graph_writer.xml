@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/MainWriterFragment"
-        android:name="com.example.myapplication.MainWriterFragment"
+        android:name="com.example.myapplication.writer_mode.MainWriterFragment"
         android:label="MainWriterFragment"
         tools:layout="@layout/fragment_main_writer">
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/WriterSettingsFragment"
-        android:name="com.example.myapplication.WriterSettingsFragment"
+        android:name="com.example.myapplication.writer_mode.WriterSettingsFragment"
         android:label="WriterSettingsFragment"
         tools:layout="@layout/fragment_reader_settings">
         <action
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/WritingFragment"
-        android:name="com.example.myapplication.WritingFragment"
+        android:name="com.example.myapplication.writer_mode.WritingFragment"
         android:label="WritingFragment"
         tools:layout="@layout/fragment_writing">
         <action

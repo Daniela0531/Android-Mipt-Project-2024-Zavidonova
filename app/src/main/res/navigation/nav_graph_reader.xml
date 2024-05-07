@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/ReaderSettingsFragment"
-        android:name="com.example.myapplication.ReaderSettingsFragment"
+        android:name="com.example.myapplication.reader_mode.ReaderSettingsFragment"
         android:label="ReaderSettingsFragment"
         tools:layout="@layout/fragment_reader_settings">
 
@@ -18,9 +18,8 @@
 
     <fragment
         android:id="@+id/MainReaderFragment"
-        android:name="com.example.myapplication.MainReaderFragment"
-        android:label="ReaderFragment"
-        tools:layout="@layout/fragment_main_reader">
+        android:name="com.example.myapplication.reader_mode.MainReaderFragment"
+        android:label="ReaderFragment">
 
         <action
             android:id="@+id/action_MainReaderFragment_to_ReadingFragment"
@@ -32,7 +31,7 @@
 
     <fragment
         android:id="@+id/ReadingFragment"
-        android:name="com.example.myapplication.ReadingFragment"
+        android:name="com.example.myapplication.reader_mode.ReadingFragment"
         android:label="ReadingFragment"
         tools:layout="@layout/fragment_reading">
 

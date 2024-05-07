@@ -2,17 +2,14 @@ package com.example.myapplication
 
 import android.R
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
-import com.example.myapplication.R.layout.activity_main
 import com.example.myapplication.databinding.ActivityMainBinding
 
 //class MainActivity : AppCompatActivity() {

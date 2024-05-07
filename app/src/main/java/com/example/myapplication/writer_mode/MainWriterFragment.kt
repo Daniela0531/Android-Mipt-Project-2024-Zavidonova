@@ -1,22 +1,18 @@
-package com.example.myapplication
+package com.example.myapplication.writer_mode
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Switch
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.databinding.FragmentReaderSettingsBinding
+import com.example.myapplication.R
+import com.example.myapplication.databinding.FragmentMainWriterBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
-class ReaderSettingsFragment : Fragment() {
+class MainWriterFragment : Fragment() {
 
-    private var _binding: FragmentReaderSettingsBinding? = null
-    private lateinit var switchTheme: Switch
-    private lateinit var textView: Switch
+    private var _binding: FragmentMainWriterBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -26,8 +22,8 @@ class ReaderSettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = FragmentReaderSettingsBinding.inflate(inflater, container, false)
+        Log.d("main writer fragment", "I am created!")
+        _binding = FragmentMainWriterBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -35,8 +31,12 @@ class ReaderSettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonStories.setOnClickListener {
-            findNavController().navigate(R.id.action_ReaderSettingsFragment_to_MainReaderFragment)
+        binding.toWrite.setOnClickListener {
+            findNavController().navigate(R.id.action_MainWriterFragment_to_WritingFragment)
+        }
+
+        binding.writerSettings.setOnClickListener {
+            findNavController().navigate(R.id.action_MainWriterFragment_to_WriterSettingsFragment)
         }
     }
 
