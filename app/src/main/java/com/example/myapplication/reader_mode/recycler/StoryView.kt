@@ -2,6 +2,7 @@ package com.example.myapplication.reader_mode.recycler
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -28,18 +29,13 @@ class StoryView @JvmOverloads constructor(
 
     fun render(viewState: StoryViewState) {
         textView.text = viewState.text
-//        imageView.setImageResource(viewState.resId)
+        Log.d("render", "render")
     }
 }
 
 
 data class StoryViewState (
     val text: String,
-    val resId: Int,
-) {
-    val items: List<StoryViewState>
-        get() {
-            TODO()
-        }
-}
+)
+
 

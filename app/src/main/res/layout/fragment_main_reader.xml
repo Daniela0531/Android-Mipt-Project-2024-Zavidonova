@@ -9,15 +9,63 @@
     android:theme="@style/ThemeOverlay.Inspiration.FullscreenContainer"
     tools:context=".ReaderNavigationFragment">
 
-    <LinearLayout
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginHorizontal="10sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toTopOf="parent">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/button_to_add_story_to_reader"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="add story"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginHorizontal="2sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="right"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <androidx.recyclerview.widget.RecyclerView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/main_reader"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </androidx.recyclerview.widget.RecyclerView>&ndash;&gt;-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/settings"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/settings"-->
+<!--                android:layout_marginHorizontal="2sp"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/reading"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/reading"-->
+<!--                android:layout_marginHorizontal="2sp"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_marginHorizontal="10sp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/button_to_add_story_to_reader"
@@ -28,12 +76,14 @@
             android:layout_gravity="right"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/main_reader"
+            android:id="@+id/story_recycle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            app:layoutManager="LinearLayoutManager">
 
         </androidx.recyclerview.widget.RecyclerView>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,5 +108,27 @@
         </LinearLayout>
 
     </LinearLayout>
+<!--    -->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/settings"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="@string/settings"-->
+<!--            android:layout_marginHorizontal="2sp"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/reading"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="@string/reading"-->
+<!--            android:layout_marginHorizontal="2sp"/>-->
+
+<!--    </LinearLayout>-->
 
 </FrameLayout>

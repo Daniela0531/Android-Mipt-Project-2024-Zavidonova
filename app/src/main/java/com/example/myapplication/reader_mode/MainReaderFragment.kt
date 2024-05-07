@@ -49,6 +49,7 @@ class MainReaderFragment : Fragment(R.layout.fragment_main_reader) {
         binding.reading.setOnClickListener {
             findNavController().navigate(R.id.action_MainReaderFragment_to_ReadingFragment)
         }
+        Log.d("main reader fragment","binding.settings")
 
         binding.settings.setOnClickListener {
             findNavController().navigate(R.id.action_MainReaderFragment_to_ReaderSettingsFragment)
@@ -56,34 +57,29 @@ class MainReaderFragment : Fragment(R.layout.fragment_main_reader) {
 
         /////////
 
-        Log.d("main reader fragment","newStrings")
-        storyRecycler = view.findViewById(R.id.main_reader)
+//        Log.d("main reader fragment","newStrings")
+        storyRecycler = view.findViewById(R.id.story_recycle)
         storyRecycler.adapter = storyReaderAdapter
         storyRecycler.layoutManager = LinearLayoutManager(context)
 
         button = view.findViewById(R.id.button_to_add_story_to_reader)
-        Log.d("main reader fragment","newStrings")
-//        viewDisposables.add(
-//            viewModel.viewStates()
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe { viewState->
-//                    storyReaderAdapter.items = viewState.items
-//                    storyReaderAdapter.notifyDataSetChanged()
-//                }
-//        )
-//        viewDisposables.add(
-//            viewModel.viewStates()
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe { viewState->
-//                    storyReaderAdapter.items = viewState.items
-//                    storyReaderAdapter.notifyDataSetChanged()
-//                }
-//        )
+//        Log.d("main reader fragment","newStrings")
+
+        viewDisposables.add(
+            viewModel.viewStates()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe { viewState->
+                    storyReaderAdapter.items = viewState.items
+                    Log.d("main reader fragment","viewDisposables")
+                    storyReaderAdapter.notifyDataSetChanged()
+                }
+        )
 
         button.setOnClickListener {
+            Log.d("setOnClickListener", "getMoreStories")
             viewModel.getMoreStories()
         }
-
+        Log.d("main reader fragment","newStrings")
     }
 
     override fun onDestroyView() {

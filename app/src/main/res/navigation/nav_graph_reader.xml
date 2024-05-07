@@ -19,8 +19,7 @@
     <fragment
         android:id="@+id/MainReaderFragment"
         android:name="com.example.myapplication.reader_mode.MainReaderFragment"
-        android:label="ReaderFragment"
-        tools:layout="@layout/fragment_main_reader">
+        android:label="ReaderFragment">
 
         <action
             android:id="@+id/action_MainReaderFragment_to_ReadingFragment"

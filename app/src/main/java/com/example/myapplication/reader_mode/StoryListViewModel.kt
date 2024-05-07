@@ -1,5 +1,6 @@
 package com.example.myapplication.reader_mode
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
@@ -7,27 +8,27 @@ import androidx.recyclerview.widget.DiffUtil
 import com.example.myapplication.reader_mode.recycler.StoryViewState
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.subjects.BehaviorSubject
 
 class StoryListViewModel : ViewModel() {
 
-//    fun viewStates(): Observable<StoryListViewState> =
-//        storyRepository.storyListObservable.map { storyList ->
-//            val storyViewStateList = storyList.map {
-//                StoryViewState(
-//                    text = it.story,
-//                )
-//            }
-//            StoryListViewState(storyViewStateList)
-//        }
-//    fun viewStates(): Observable<StoryViewState> = viewStatesSubject
+    fun viewStates(): Observable<StoryListViewState> =
+        storyRepository.storyListObservable.map { storyList ->
+            val storyViewStateList = storyList.map {
+                StoryViewState(
+                    text = it.text,
+//                    resId = 1,
+                )
+            }
+            StoryListViewState(storyViewStateList)
+        }
 
     private val disposables = CompositeDisposable()
     private val storyService = StoryServiceFactory.createStoryService()
     private val storyRepository = StoryRepository(storyService)
-//    private val viewStatesSubject = BehaviorSubject
+
 
     fun getMoreStories () {
+        Log.d("getMoreStories", "disposables.add")
         disposables.add(storyRepository.loadStory())
     }
 
@@ -41,24 +42,15 @@ class StoryListViewModel : ViewModel() {
                 modelClass: Class<T>,
                 extras: CreationExtras
             ): T {
+                Log.d("factory", "I am here")
                 return StoryListViewModel() as T
             }
         }
     }
 
-//    fun viewStates(): Observable<StoryListViewState> =
-//        storyRepository.storyListObservable.map { storyList ->
-//            val viewStates = storyList.map {
-//                StoryViewState(
-//                    text = it.story,
-//                )
-//            }
-//            StoryListViewState(viewStates.map {StoryViewState(text = it.story)})
-//        }
+
 }
 
 class StoryListViewState(
     val items: List<StoryViewState>,
-    val diffResult: DiffUtil.DiffResult,
-
-    )
+)
